@@ -1,0 +1,13 @@
+import pymysql
+
+#open database connection
+db = pymysql.connect("localhost","root","","testdb")
+
+#prepare a cursor object using cursor() method
+cursor = db.cursor()
+
+#execute
+# cursor.execute('create table tab1(name text(20), age int, address varchar(30))')
+
+db.commit()
+db.close()
